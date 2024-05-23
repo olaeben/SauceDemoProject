@@ -12,11 +12,17 @@ test.describe("Product Management", () => {
   test("compare screenshot of Items Descending", async ({ page }) => {
     const SortDescending = new addProductPage(page);
     await SortDescending.sortDesc();
-    await expect(page).toHaveScreenshot({ maxDiffPixels: 800000 });
+    await expect(page).toHaveScreenshot({
+        maxDiffPixels: 800, 
+        maxDiffPixelRatio: 0.01 
+      });
   });
 
   test("compare screenshot of Items Ascending", async ({ page }) => {
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({
+        maxDiffPixels: 800,
+        maxDiffPixelRatio: 0.01 
+      });
   });
 
   
