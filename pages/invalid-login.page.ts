@@ -8,7 +8,6 @@ export default class InvalidLoginPage {
   }
 
   // Locators
-
   verifySiteTitle = () => this.page.getByText("Swag Labs");
   usernameTextbox = () => this.page.locator('[data-test="username"]');
   passwordTextbox = () => this.page.locator('[data-test="password"]');
