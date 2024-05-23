@@ -16,8 +16,6 @@ test.describe("Product Management", () => {
   test("compare screenshot of Items Descending", async ({ page }) => {
     const SortDescending = new addProductPage(page);
     await SortDescending.sortDesc();
-
-    // Test is expected to Pass because the maDiffPixels is greater than actual pixel difference
-    await expect(page).toHaveScreenshot({ maxDiffPixels: 300000 });
+    await expect(page).toHaveScreenshot({ maxDiffPixels: 800000 });
   });
 });

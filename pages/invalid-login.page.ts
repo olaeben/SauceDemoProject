@@ -19,7 +19,6 @@ export default class InvalidLoginPage {
   }
 
   // Actions
-
   public async InvalidloginCreds(username, password) {
     await this.verifySiteTitle().isVisible();
     await this.usernameTextbox().fill(username);
