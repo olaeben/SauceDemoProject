@@ -9,13 +9,15 @@ test.describe("Product Management", () => {
     await inventoryPage.navigateToInventory();
   });
 
-  test("compare screenshot of Items Ascending", async ({ page }) => {
-    await expect(page).toHaveScreenshot();
-  });
-
   test("compare screenshot of Items Descending", async ({ page }) => {
     const SortDescending = new addProductPage(page);
     await SortDescending.sortDesc();
     await expect(page).toHaveScreenshot({ maxDiffPixels: 800000 });
   });
+
+  test("compare screenshot of Items Ascending", async ({ page }) => {
+    await expect(page).toHaveScreenshot();
+  });
+
+  
 });
